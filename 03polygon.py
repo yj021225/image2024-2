@@ -14,3 +14,5 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 # 2024-9 원그리기
+# 2024-9 원그리기
+# 2024-9 원그리기
