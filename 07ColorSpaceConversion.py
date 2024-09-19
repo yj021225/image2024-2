@@ -19,7 +19,7 @@ cv2.destroyAllWindows()
 
 imgyy = np.full((293, 406), 255, dtype=np.uint8)
 b, g, r = cv2.split(img)
-imgyy = (b * 0.114) + (g * 0.587) + (r * 0.299)
+imgyy = 0.299 * r + 0.587 * g + 0.114 * b
 print(imgyy)
 imgyy = imgyy.astype(np.uint8)
 diff = y - imgyy
