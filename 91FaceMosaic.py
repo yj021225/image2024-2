@@ -1,5 +1,6 @@
+# 2024.10.31
+# Hear filter를 사용하여 얼굴 모자이크 처리
 import cv2
-from cv2.data import haarcascades
 
 face_cascade = cv2.CascadeClassifier('./recdata/haarcascade_frontalface_default.xml')
 img = cv2.imread('./img/smilings.jpg')
