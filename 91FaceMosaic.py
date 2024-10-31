@@ -14,7 +14,7 @@ for face in faces:
     roi = cv2.resize(roi, (fw // rate, fh // rate))
     roi = cv2.resize(roi, (fw, fh))
     img[fy:fy + fh, fx:fx + fw] = roi
-    cv2.imshow('mosaic', img)
 
+cv2.imshow('gray', img)
 cv2.waitKey()
 cv2.destroyAllWindows()
