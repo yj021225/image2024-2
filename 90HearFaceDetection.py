@@ -1,9 +1,11 @@
 import cv2
 from cv2.data import haarcascades
+import time
+start = time.time()
 
 face_cascade = cv2.CascadeClassifier('./recdata/haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('./recdata/haarcascade_eye.xml')
-img = cv2.imread('./img/children.jpg')
+img = cv2.imread('./img/graduate.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 faces = face_cascade.detectMultiScale(gray)
 print(faces)
@@ -18,5 +20,8 @@ for face in faces:
         cv2.rectangle(img, (ex + fx, ey + fy), (ex + fx + ew, ey + fy + eh), (0, 255, 0), 2)
 
 cv2.imshow('gray', img)
+end = time.time()
+print((end-start)*1000)
 cv2.waitKey()
 cv2.destroyAllWindows()
+
