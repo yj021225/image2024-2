@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 img = cv2.imread("./img/sudoku.png")
-
+# 컬러이미지는 흑백변환
 # img = cv2.imread("./img/children.jpg", cv2.IMREAD_GRAYSCALE)
 
 gx_kernel = np.array([-1, 1])
